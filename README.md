@@ -23,4 +23,28 @@ Artisan is a tool that is used when the laravel is installed, in simple, when we
 3. php artisan --version
 	- This **command** is used to check the version of the laravel.
 
- 
+## Route
+Routing is used in laravel to map our requests with parameters. It is a flexible to for the client to interact with our controllers and is also a convinient one to one way to return the view or any string response against the request from the client.
+
+## Blade Template
+It is a teplate engine introduced in **Laravel 5.1**. This template engine allows us to reuse the template to other views and also does not restrict the user to use plain php like in core to the blade template. The template is cached until it is modified.
+
+## composer.json
+This file contains all the configurations when creating the project. And you can see each configuration or any library included is stored in the vendor file. 
+
+## Vendor Folder
+It includes all the dependencies added by the composer in this directory. You can see all the configuration in the composer.json file and every configuration there is added in the vendor folder by composer. 
+
+## .env
+This is the **environmental configuration**. This is where all your database credentials and the server configuration is done. And when you deploy the project live, you can change the credentials as per the server and the database or other configurations as well.
+
+## Controller and Model Overview
+The **app** directory that is in the root contains our controllers and models. We can easily create our models and controllers using the artisan commands and here i'll describe for now the command for making the controller.
+
+> php artisan make:controller [controller_name]
+
+To connect to the **controller**, you'll need to call from the route, and when you do that there is a difference that i've noted in the projects, so type difference is the version one.
+> Old Version: [ControllerName]e@[functionname]
+> New Version: [[ControllerName]:class, '[functionname]']
+
+
