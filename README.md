@@ -1,6 +1,8 @@
 # Laravel
 All my Laravel learnings, experiments and projects are available in this repository.
 
+!(main.gif)
+
 # Important Notes for Laravel
 
 ## Installation
@@ -46,5 +48,9 @@ The **app** directory that is in the root contains our controllers and models. W
 To connect to the **controller**, you'll need to call from the route, and when you do that there is a difference that i've noted in the projects, so type difference is the version one.
 > Old Version: [ControllerName]e@[functionname]
 > New Version: [[ControllerName]:class, '[functionname]']
+
+## Migrations
+It is like a version control system in laravel that updates the database based on the ORM Objects to which are migrations created. You can see the changes in the database.
+> You can configure the database credentials in the .env file in the root of the project.
 
 
