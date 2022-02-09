@@ -58,10 +58,10 @@ It is a namespace in Laravel that provides the support of the underlying classes
 ## DB Class in Facades
 
 The **DB class** extends facades that provides to perform operations with dataabase using both modes either in ORM or raw query.
-> Raw: DB::insert('[query]', [bindings...])
-> Raw: DB::update('[query]', [bindings...])
-> Raw: DB::delete('[query]', [bindings...])
-> Raw: DB::select('[query]', [bindings...])
+> Raw: DB::insert('[query]', [bindings...]) <br/>
+  Raw: DB::update('[query]', [bindings...]) <br/>
+  Raw: DB::delete('[query]', [bindings...]) <br/>
+  Raw: DB::select('[query]', [bindings...]) <br/>
 
 The ORM Code for the CRUD to perform with the database:
 > Insert User: <br/>
