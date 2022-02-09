@@ -53,4 +53,36 @@ To connect to the **controller**, you'll need to call from the route, and when y
 It is like a version control system in laravel that updates the database based on the ORM Objects to which are migrations created. You can see the changes in the database.
 > You can configure the database credentials in the .env file in the root of the project.
 
+## What are Facades in Laravel?
+It is a namespace in Laravel that provides the support of the underlying classes. You can find many classes in the facades namespaces that acts as a helper classes in the project to perform the specific tasks.
+## DB Class in Facades
+
+The **DB class** extends facades that provides to perform operations with dataabase using both modes either in ORM or raw query.
+> Raw: DB::insert('[query]', [bindings...])
+> Raw: DB::update('[query]', [bindings...])
+> Raw: DB::delete('[query]', [bindings...])
+> Raw: DB::select('[query]', [bindings...])
+
+The ORM Code for the CRUD to perform with the database:
+> Insert User: <br/>
+  $user = new User(); <br/>
+  $user->name = 'Osama'; <br/>
+  $user->email = 'osamahu96@gmail.com'; <br/>
+  $user->password = bcrypt('password'); <br/>
+  $user->save();<br/>
+  Now there is a point to note, that we have explicitly assigned the value to each property of the model, but it saves the data to the db
+
+> To see all the data: <br/>
+  $users = User::all(); <br/>
+  dd($users); <br/>
+  It fetches all the records from the db
+
+> To update the record <br/>
+  User::where('id', 4)->update(['name' => 'Osama Ahmad']);
+  It updates the specific row from the db.
+
+
+> To record the record: <br/>
+  User::where('id', 2)->delete(); <br/>
+  It deletes the specific row from the database
 
