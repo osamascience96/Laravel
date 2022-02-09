@@ -1,7 +1,7 @@
 # Laravel
 All my Laravel learnings, experiments and projects are available in this repository.
 
-!(main.gif)
+![Main Laravel Image](main.gif)
 
 # Important Notes for Laravel
 
