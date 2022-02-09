@@ -70,7 +70,8 @@ The ORM Code for the CRUD to perform with the database:
   $user->email = 'osamahu96@gmail.com'; <br/>
   $user->password = bcrypt('password'); <br/>
   $user->save();<br/>
-  Now there is a point to note, that we have explicitly assigned the value to each property of the model, but it saves the data to the db
+  Now there is a point to note, that we have explicitly assigned the value to each property of the model, but it saves the data to the db.<br/>
+  **Bcrypt** algorithm used above is the encryption algorithm that hashes the given value given to the function. It is the utility provided by Laravel for encryption.
 
 > To see all the data: <br/>
   $users = User::all(); <br/>
