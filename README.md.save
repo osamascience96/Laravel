@@ -70,7 +70,7 @@ The ORM Code for the CRUD to perform with the database:
   $user->email = 'osamahu96@gmail.com'; <br/>
   $user->password = bcrypt('password'); <br/>
   $user->save();<br/>
-  Now there is a point to note, that we have explicitly assigned the value to each property of the model, but it saves the data to the db.<br/>
+B  Now there is a point to note, that we have explicitly assigned the value to each property of the model, but it saves the data to the db.<br/>
   **Bcrypt** algorithm used above is the encryption algorithm that hashes the given value given to the function. It is the utility provided by Laravel for encryption.
 
 > To see all the data: <br/>
@@ -87,34 +87,3 @@ The ORM Code for the CRUD to perform with the database:
   User::where('id', 2)->delete(); <br/>
   It deletes the specific row from the database
 
-
-## Mass Assignment Security(Elaquent Feature)
-   1. It is a security vunerablity that lets any user pass to any level of website, may provide query to database that do not match the schema of any table for instance. 
-   2. To avoid the above problem, mass assignment fillable must be activated that lets the user pass only the allowed attributes so that user cannot send invalid values which may ultimately crashes teh wesbite.
-
-## Accessors and Mutators
-   As we know that every MVC Framework has common norms and Getters and Setters are one of them, though they are called in different terms as also in the world of Laravel it is called Accessors(Getters) and Mutators(Setters)
-   
-   > *** Mutators: *** This is the setter for to set any property inside the model and then perform operation on it, for instance to transform the value etc. So that we may perform appending final values in the database.
-   > *** Accessors: *** This is the getter for to get any property value just like we return any model property.
-   > ** Rules **: Mutator: set[Property Name]Attribute  <==> Accessor: get[Property Name]Attribute
-
-## Install Laravel UI Package
-There are many packages that can be installed by the following steps that are shown below but to best choose the example, i've choosen Laravel UI Package so that it'll be instnaciated to the composer.json file and will be added to the vendors directory.
-   1. Use composer to install any require package
-      - composer require laravel/ui
-   2. Using artisan, we can make basic login and registration views with routes automatically instanciated for them.
-      - php artisan ui:auth
-   3. After preparing the full routed template of ui, we'll power these basic templates of login and registration with bootstrap theme using one of the following command.
-      - php artisan ui bootstrap
-   4. Finally, we need to perform some of the node commands as the finals steps to confirm the laravel ui packages in the project or to configure these in the php artisan environment.
-      - npm install
-      - npm run dev
-   
-   <br/>
-   
-   Note: To be curious, if you want to check the list of all the php artisan commands related to the packages you've thus installed.
-       - php artisan listall
-
-## Blade Template
-It is a specific Laravel blade syntax in replacement of php code when writing the view code in .blade.php file. The benefit of using the .blade.php syntax is that it provides us the ability to write cleaner and understandable code. It also provides us clearner accessability of data using laravel blade alias and also we can we can write traditional php code.
